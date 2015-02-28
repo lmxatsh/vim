@@ -1,3 +1,4 @@
+"setting from http://amix.dk/vim/vimrc.html
 set history=700
 set showcmd
 let mapleader = ";"
