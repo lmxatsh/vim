@@ -1,4 +1,3 @@
-"setting from http://amix.dk/vim/vimrc.html
 set history=700
 set showcmd
 let mapleader = ";"
@@ -68,4 +67,14 @@ nnoremap <leader>w :w!<cr>
 nnoremap <leader>q :wq<cr>
 "tabedit the file in the same dir
 noremap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+"check syntax for py and pl
+autocmd Bufread *.py nnoremap <leader>c :w!<cr>:!python -m py_compile %<cr>
+autocmd Bufread *.pl nnoremap <leader>c :w!<cr>:!perl -c %<cr>
+autocmd Bufread *.plx nnoremap <leader>c :w!<cr>:!perl -c %<cr>
+autocmd Bufread *.pm nnoremap <leader>c :w!<cr>:!perl -c %<cr>
+
+
+"check space
+nnoremap <leader>l :set list!<cr>
+set listchars=tab:>-,eol:$
 
